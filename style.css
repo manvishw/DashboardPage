@@ -11,19 +11,20 @@
   --GRAY: #e5e7eb;
   --WHITE: #f8fafc;
   --YELLOW: #fbbf24;
-  --TEAL :#5eead4;
-  --CYAN:#67e8f9;
-  --SKY:#38bdf8;
-  --VIOLET:#a78bfa;
-  --FUSCHIA:#e879f9;
-  --PINK:#f472b6;
-  --ROSE:#fb7185;
+  --TEAL: #5eead4;
+  --CYAN: #67e8f9;
+  --SKY: #38bdf8;
+  --VIOLET: #a78bfa;
+  --FUSCHIA: #e879f9;
+  --PINK: #f472b6;
+  --ROSE: #fb7185;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   display: grid;
+  grid-template-columns: 200px;
   grid-template-areas:
     "sidebar  header header header header"
     "sidebar  main main main main"
@@ -32,13 +33,16 @@ body {
     "sidebar  main main main main"
     "sidebar  main main main main";
 }
-
+/* Header style Start here   */
 .header {
   border: 1px solid green;
   background-color: red;
   grid-area: header;
 }
 
+/* Header Style Ends Here  */
+
+/* Sidebar Styling Start Here   */
 .sidebar {
   background-color: var(--VIOLET);
   grid-area: sidebar;
@@ -47,7 +51,7 @@ body {
   align-content: space-around;
 }
 
-.sidebar a{
+.sidebar a {
   font-family: Roboto;
   font-weight: bold;
   text-decoration: none;
@@ -131,7 +135,12 @@ body {
   height: 35px;
 }
 
+/* SideBar Styling Ends Here  */
+
+/* Main style start Here  */
 .main {
   border: 1px solid yellow;
   grid-area: main;
 }
+
+/* Main Styling Ends Here  */
