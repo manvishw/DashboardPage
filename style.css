@@ -21,10 +21,12 @@
 }
 
 body {
+  background-color: var(--GRAY);
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: 200px;
+  grid-template-rows: 150px;
   grid-template-areas:
     "sidebar  header header header header"
     "sidebar  main main main main"
@@ -35,16 +37,93 @@ body {
 }
 /* Header style Start here   */
 .header {
-  border: 1px solid green;
-  background-color: red;
+  background-color: var(--GRAY);
   grid-area: header;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 50% 50%;
+  height: 100%;
 }
 
+.header img {
+  width: 30px;
+  height: 30px;
+}
+
+.search {
+  /* border: 2px solid salmon; */
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.search img {
+  width: 25px;
+  height: 25px;
+}
+.search input {
+  width: 80%;
+  height: 30%;
+  border-radius: 10px;
+  background-color: var(--GRAY);
+}
+
+.notification {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.notification #notification {
+  width: 25px;
+  height: 25px;
+}
+
+
+.notification p {
+  font-size: 1.3rem;
+  font-family: Roboto;
+}
+
+.userData {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+
+.userData #second {
+  font-size: 1.2rem;
+}
+
+.buttons {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.buttons button {
+  border: none;
+  width: 60px;
+  background-color: var(--SKY);
+  color: var(--WHITE);
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: normal;
+  height: 30px;
+}
+.buttons button:hover {
+  cursor: pointer;
+}
 /* Header Style Ends Here  */
 
 /* Sidebar Styling Start Here   */
 .sidebar {
-  background-color: var(--VIOLET);
+  background-color: var(--GRAY);
   grid-area: sidebar;
   display: grid;
   justify-content: center;
@@ -55,7 +134,7 @@ body {
   font-family: Roboto;
   font-weight: bold;
   text-decoration: none;
-  color: var(--WHITE);
+  color: black;
 }
 .dashboard {
   display: flex;
@@ -139,8 +218,115 @@ body {
 
 /* Main style start Here  */
 .main {
-  border: 1px solid yellow;
   grid-area: main;
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  grid-template-areas:
+    "main main side1"
+    "main main side1"
+    "main main side2"
+    "main main side2";
 }
 
+.main-content {
+  grid-area: main;
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  grid-template-columns: 6fr 6fr;
+}
+.main-images {
+  display: flex;
+  gap: 1rem;
+  width: 25px;
+  height: 25px;
+}
+.one {
+  border-radius: 10px;
+  background-color: var(--TEAL);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.two {
+  border-radius: 10px;
+  background-color: var(--CYAN);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.three {
+  border-radius: 10px;
+  background-color: var(--PINK);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.four {
+  border-radius: 10px;
+  background-color: var(--YELLOW);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.five {
+  border-radius: 10px;
+  background-color: var(--ROSE);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.six {
+  border-radius: 10px;
+  background-color: var(--FUSCHIA)  ;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-content1 {
+  background-color: #5eead4;
+  border-radius: 10px;
+  grid-area: side1;
+  display: grid;
+  grid-template-columns: 12fr;
+  grid-template-rows: 4fr 4fr 4fr;
+  padding: 1rem;
+}
+
+.side-content2 {
+  background-color: var(--CYAN);
+  border-radius: 10px;
+  grid-area: side2;
+  display: grid;
+  grid-template: repeat(3,4fr)/12fr;
+  justify-items: center;
+  padding: 1rem;
+}
+.side-content2 img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
 /* Main Styling Ends Here  */
