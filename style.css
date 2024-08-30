@@ -93,10 +93,11 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
+  gap: 1rem;
 }
 
 .userData #second {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .buttons {
@@ -218,6 +219,8 @@ body {
 
 /* Main style start Here  */
 .main {
+  background-color: white;
+  background-color: white;
   grid-area: main;
   display: grid;
   padding: 1rem;
